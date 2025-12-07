@@ -17,12 +17,14 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 35px;
 }
 
 .first-steps {
   display: flex;
   font-family: Limelight;
   font-size: 70px;
+  color: white;
 }
 
 #dialogue-container {
@@ -64,6 +66,10 @@ body {
   }
 }
 
+#dialogue {
+  color: white;
+  font-weight: bold;
+}
 #nextBtn {
   background-color: #aa1b1b;
     padding: 10px;
@@ -72,3 +78,53 @@ body {
     border: 0px;
 }
 
+#nextBtn:hover {
+  background-color: #e32727
+}
+#gift {
+  margin-top: 40px;
+  display: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gift-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  filter: blur(12px) brightness(0.5);
+  transition: 0.5s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.gift-img.revealed {
+  filter: blur(0) brightness(1);
+  transform: scale(1.05);
+}
+
+/* Fenêtre popup */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: none;               /* caché par défaut */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Image dans le popup */
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#lightbox.show #lightbox-img {
+  transform: scale(1);
+}
