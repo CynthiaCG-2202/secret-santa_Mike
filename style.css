@@ -25,6 +25,7 @@ body {
   font-family: Limelight;
   font-size: 70px;
   color: white;
+  text-shadow: 0px 0px 11px #919191;
 }
 
 #dialogue-container {
@@ -70,6 +71,7 @@ body {
   color: white;
   font-weight: bold;
 }
+
 #nextBtn {
   background-color: #aa1b1b;
     padding: 10px;
